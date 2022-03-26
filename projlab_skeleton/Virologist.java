@@ -12,11 +12,21 @@ public class Virologist {
 	private List<Material> materialsOwned;
 	private Field field;
 
+	public Virologist(String n) {
+		this.name = n;
+		this.mobility = true;
+		this.agentsOwned = new List<Agent>();
+		this.agentsKnown = new List<Agent>();
+		this.equipmentsOwned = new List<Equipment>();
+		this.materialsOwned = new List<Material>();
+		this.field = new Field();
+	}
+	
 	public Field getField(){
 		return field;
 	}
 
-	//Move->lépés választása-> lépés -> mezõ kiírása ->elem felvétele?
+	//Move->lÃ©pÃ©s vÃ¡lasztÃ¡sa-> lÃ©pÃ©s -> mezÃµ kiÃ­rÃ¡sa ->elem felvÃ©tele?
 	public void Move(Field f1) {
 		if(field.IsNeighbour(f1)) {
 			field.Remove(this);
@@ -52,7 +62,7 @@ public class Virologist {
 	}
 	
 	public void Paralyze() {
-		System.out.println("A virológus lebénult.");
+		System.out.println("A virolÃ³gus lebÃ©nult.");
 	}
 	
 	public void RandomMove() {
@@ -60,23 +70,23 @@ public class Virologist {
 	}
 	
 	public void Untouchable() {
-		System.out.println("A virológus érinthetetlenné vált!");
+		System.out.println("A virolÃ³gus Ã©rinthetetlennÃ© vÃ¡lt!");
 	}
 	
 	public void Forget() {
-		System.out.println("A virológus elfelejtette az összes genetikaikódot!");
+		System.out.println("A virolÃ³gus elfelejtette az Ã¶sszes genetikaikÃ³dot!");
 	}
 	
 	public void Extend() {
-		System.out.println("A virológus raktára növekedett!");
+		System.out.println("A virolÃ³gus raktÃ¡ra nÃ¶vekedett!");
 	}
 	
 	public void Defense() {
-		System.out.println("A virológust nem érte el az ágens!");
+		System.out.println("A virolÃ³gust nem Ã©rte el az Ã¡gens!");
 	}
 	
 	public void Reverse() {
-		System.out.println("A virológus visszakente az ágenst a másik virológusra!");
+		System.out.println("A virolÃ³gus visszakente az Ã¡genst a mÃ¡sik virolÃ³gusra!");
 	}
 	
 	public void PickUpMaterial(Material m) {
