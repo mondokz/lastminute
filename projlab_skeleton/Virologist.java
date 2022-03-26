@@ -18,8 +18,8 @@ public class Virologist {
 
 	//Move->lépés választása-> lépés -> mezõ kiírása ->elem felvétele?
 	public void Move(Field f1) {
-		if(field.IsNeighbour(f1)) {
-			field.Remove(this);
+		if(f1.IsNeighbour(f1)) {
+			f1.Remove(this);
 			f1.Accept(this);
 		}
 	}

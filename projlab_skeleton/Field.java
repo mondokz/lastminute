@@ -22,7 +22,7 @@ public abstract class Field {
     public boolean IsNeighbour(Field f){
         System.out.println("IsNeighbor()");
 
-
+        return true;
     }
 
 }
